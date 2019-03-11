@@ -21,10 +21,6 @@ d_own_x = -500.0
 d_own_y = -0.0
 v_int_x = -1.0
 v_int_y = -0.0
-v_res_x = np.arange(-20., 20., 0.001)
-
-v_res_y_1 = (-a_geo*d_int_y*v_res_x + 2*a_geo*d_own_x*v_int_y + a_geo*d_own_y*v_res_x + b_geo*d_int_x*v_int_x - b_geo*d_int_x*v_res_x + b_geo*d_int_y*v_int_y - b_geo*d_own_x*v_int_x + b_geo*d_own_x*v_res_x + b_geo*d_own_y*v_int_y + 2*c_geo*v_int_y - np.sqrt(4*a_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 4*a_geo**2*d_int_x*d_own_x*v_res_x**2 + a_geo**2*d_int_y**2*v_res_x**2 - 2*a_geo**2*d_int_y*d_own_y*v_res_x**2 - 4*a_geo**2*d_own_x**2*v_int_x**2 + 4*a_geo**2*d_own_x**2*v_int_x*v_res_x + a_geo**2*d_own_y**2*v_res_x**2 + 2*a_geo*b_geo*d_int_x*d_int_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_int_y*v_res_x**2 + 4*a_geo*b_geo*d_int_x*d_own_x*v_int_x*v_int_y - 4*a_geo*b_geo*d_int_x*d_own_x*v_int_y*v_res_x + 2*a_geo*b_geo*d_int_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_int_y**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_int_y*d_own_x*v_int_x**2 + 6*a_geo*b_geo*d_int_y*d_own_x*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_y*d_own_x*v_res_x**2 - 4*a_geo*b_geo*d_int_y*d_own_y*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x**2*v_int_x*v_int_y + 4*a_geo*b_geo*d_own_x**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x*d_own_y*v_int_x**2 + 6*a_geo*b_geo*d_own_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_own_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_own_y**2*v_int_y*v_res_x + 4*a_geo*c_geo*d_int_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_int_x*v_res_x**2 - 8*a_geo*c_geo*d_own_x*v_int_x**2 + 12*a_geo*c_geo*d_own_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_own_x*v_res_x**2 + b_geo**2*d_int_x**2*v_int_x**2 - 2*b_geo**2*d_int_x**2*v_int_x*v_res_x + b_geo**2*d_int_x**2*v_res_x**2 + 2*b_geo**2*d_int_x*d_int_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_int_y*v_int_y*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_int_x**2 + 4*b_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_res_x**2 + 2*b_geo**2*d_int_x*d_own_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_int_y**2*v_int_y**2 - 2*b_geo**2*d_int_y*d_own_x*v_int_x*v_int_y + 2*b_geo**2*d_int_y*d_own_x*v_int_y*v_res_x - 4*b_geo**2*d_int_y*d_own_y*v_int_x**2 + 8*b_geo**2*d_int_y*d_own_y*v_int_x*v_res_x - 2*b_geo**2*d_int_y*d_own_y*v_int_y**2 - 4*b_geo**2*d_int_y*d_own_y*v_res_x**2 + b_geo**2*d_own_x**2*v_int_x**2 - 2*b_geo**2*d_own_x**2*v_int_x*v_res_x + b_geo**2*d_own_x**2*v_res_x**2 - 2*b_geo**2*d_own_x*d_own_y*v_int_x*v_int_y + 2*b_geo**2*d_own_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_own_y**2*v_int_y**2 + 4*b_geo*c_geo*d_int_x*v_int_x*v_int_y - 4*b_geo*c_geo*d_int_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_int_y*v_int_x**2 + 8*b_geo*c_geo*d_int_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_int_y*v_res_x**2 - 4*b_geo*c_geo*d_own_x*v_int_x*v_int_y + 4*b_geo*c_geo*d_own_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_own_y*v_int_x**2 + 8*b_geo*c_geo*d_own_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_own_y*v_res_x**2 - 4*c_geo**2*v_int_x**2 + 8*c_geo**2*v_int_x*v_res_x - 4*c_geo**2*v_res_x**2))/(2*(a_geo*d_own_x + b_geo*d_int_y + c_geo))
-v_res_y_2 = (-a_geo*d_int_y*v_res_x + 2*a_geo*d_own_x*v_int_y + a_geo*d_own_y*v_res_x + b_geo*d_int_x*v_int_x - b_geo*d_int_x*v_res_x + b_geo*d_int_y*v_int_y - b_geo*d_own_x*v_int_x + b_geo*d_own_x*v_res_x + b_geo*d_own_y*v_int_y + 2*c_geo*v_int_y + np.sqrt(4*a_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 4*a_geo**2*d_int_x*d_own_x*v_res_x**2 + a_geo**2*d_int_y**2*v_res_x**2 - 2*a_geo**2*d_int_y*d_own_y*v_res_x**2 - 4*a_geo**2*d_own_x**2*v_int_x**2 + 4*a_geo**2*d_own_x**2*v_int_x*v_res_x + a_geo**2*d_own_y**2*v_res_x**2 + 2*a_geo*b_geo*d_int_x*d_int_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_int_y*v_res_x**2 + 4*a_geo*b_geo*d_int_x*d_own_x*v_int_x*v_int_y - 4*a_geo*b_geo*d_int_x*d_own_x*v_int_y*v_res_x + 2*a_geo*b_geo*d_int_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_int_y**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_int_y*d_own_x*v_int_x**2 + 6*a_geo*b_geo*d_int_y*d_own_x*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_y*d_own_x*v_res_x**2 - 4*a_geo*b_geo*d_int_y*d_own_y*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x**2*v_int_x*v_int_y + 4*a_geo*b_geo*d_own_x**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x*d_own_y*v_int_x**2 + 6*a_geo*b_geo*d_own_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_own_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_own_y**2*v_int_y*v_res_x + 4*a_geo*c_geo*d_int_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_int_x*v_res_x**2 - 8*a_geo*c_geo*d_own_x*v_int_x**2 + 12*a_geo*c_geo*d_own_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_own_x*v_res_x**2 + b_geo**2*d_int_x**2*v_int_x**2 - 2*b_geo**2*d_int_x**2*v_int_x*v_res_x + b_geo**2*d_int_x**2*v_res_x**2 + 2*b_geo**2*d_int_x*d_int_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_int_y*v_int_y*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_int_x**2 + 4*b_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_res_x**2 + 2*b_geo**2*d_int_x*d_own_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_int_y**2*v_int_y**2 - 2*b_geo**2*d_int_y*d_own_x*v_int_x*v_int_y + 2*b_geo**2*d_int_y*d_own_x*v_int_y*v_res_x - 4*b_geo**2*d_int_y*d_own_y*v_int_x**2 + 8*b_geo**2*d_int_y*d_own_y*v_int_x*v_res_x - 2*b_geo**2*d_int_y*d_own_y*v_int_y**2 - 4*b_geo**2*d_int_y*d_own_y*v_res_x**2 + b_geo**2*d_own_x**2*v_int_x**2 - 2*b_geo**2*d_own_x**2*v_int_x*v_res_x + b_geo**2*d_own_x**2*v_res_x**2 - 2*b_geo**2*d_own_x*d_own_y*v_int_x*v_int_y + 2*b_geo**2*d_own_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_own_y**2*v_int_y**2 + 4*b_geo*c_geo*d_int_x*v_int_x*v_int_y - 4*b_geo*c_geo*d_int_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_int_y*v_int_x**2 + 8*b_geo*c_geo*d_int_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_int_y*v_res_x**2 - 4*b_geo*c_geo*d_own_x*v_int_x*v_int_y + 4*b_geo*c_geo*d_own_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_own_y*v_int_x**2 + 8*b_geo*c_geo*d_own_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_own_y*v_res_x**2 - 4*c_geo**2*v_int_x**2 + 8*c_geo**2*v_int_x*v_res_x - 4*c_geo**2*v_res_x**2))/(2*(a_geo*d_own_x + b_geo*d_int_y + c_geo))
 
 nul_x_1 = (2*a_geo**2*d_int_x*d_own_x*v_int_x + 2*a_geo**2*d_own_x**2*v_int_x + a_geo*b_geo*d_int_x*d_int_y*v_int_x - 2*a_geo*b_geo*d_int_x*d_own_x*v_int_y + a_geo*b_geo*d_int_x*d_own_y*v_int_x + a_geo*b_geo*d_int_y**2*v_int_y + 3*a_geo*b_geo*d_int_y*d_own_x*v_int_x - 2*a_geo*b_geo*d_int_y*d_own_y*v_int_y + 2*a_geo*b_geo*d_own_x**2*v_int_y + 3*a_geo*b_geo*d_own_x*d_own_y*v_int_x + a_geo*b_geo*d_own_y**2*v_int_y + 2*a_geo*c_geo*d_int_x*v_int_x + 6*a_geo*c_geo*d_own_x*v_int_x - b_geo**2*d_int_x**2*v_int_x - b_geo**2*d_int_x*d_int_y*v_int_y + 2*b_geo**2*d_int_x*d_own_x*v_int_x - b_geo**2*d_int_x*d_own_y*v_int_y + b_geo**2*d_int_y*d_own_x*v_int_y + 4*b_geo**2*d_int_y*d_own_y*v_int_x - b_geo**2*d_own_x**2*v_int_x + b_geo**2*d_own_x*d_own_y*v_int_y - 2*b_geo*c_geo*d_int_x*v_int_y + 4*b_geo*c_geo*d_int_y*v_int_x + 2*b_geo*c_geo*d_own_x*v_int_y + 4*b_geo*c_geo*d_own_y*v_int_x + 4*c_geo**2*v_int_x - 2*np.sqrt((a_geo*d_own_x + b_geo*d_int_y + c_geo)*(a_geo*d_own_x + b_geo*d_own_y + c_geo)*(d_int_x**2 - 2*d_int_x*d_own_x + d_int_y**2 - 2*d_int_y*d_own_y + d_own_x**2 + d_own_y**2))*(a_geo*v_int_x + b_geo*v_int_y))/(4*a_geo**2*d_int_x*d_own_x - a_geo**2*d_int_y**2 + 2*a_geo**2*d_int_y*d_own_y - a_geo**2*d_own_y**2 + 2*a_geo*b_geo*d_int_x*d_int_y + 2*a_geo*b_geo*d_int_x*d_own_y + 2*a_geo*b_geo*d_int_y*d_own_x + 2*a_geo*b_geo*d_own_x*d_own_y + 4*a_geo*c_geo*d_int_x + 4*a_geo*c_geo*d_own_x - b_geo**2*d_int_x**2 + 2*b_geo**2*d_int_x*d_own_x + 4*b_geo**2*d_int_y*d_own_y - b_geo**2*d_own_x**2 + 4*b_geo*c_geo*d_int_y + 4*b_geo*c_geo*d_own_y + 4*c_geo**2)
 nul_x_2 = (2*a_geo**2*d_int_x*d_own_x*v_int_x + 2*a_geo**2*d_own_x**2*v_int_x + a_geo*b_geo*d_int_x*d_int_y*v_int_x - 2*a_geo*b_geo*d_int_x*d_own_x*v_int_y + a_geo*b_geo*d_int_x*d_own_y*v_int_x + a_geo*b_geo*d_int_y**2*v_int_y + 3*a_geo*b_geo*d_int_y*d_own_x*v_int_x - 2*a_geo*b_geo*d_int_y*d_own_y*v_int_y + 2*a_geo*b_geo*d_own_x**2*v_int_y + 3*a_geo*b_geo*d_own_x*d_own_y*v_int_x + a_geo*b_geo*d_own_y**2*v_int_y + 2*a_geo*c_geo*d_int_x*v_int_x + 6*a_geo*c_geo*d_own_x*v_int_x - b_geo**2*d_int_x**2*v_int_x - b_geo**2*d_int_x*d_int_y*v_int_y + 2*b_geo**2*d_int_x*d_own_x*v_int_x - b_geo**2*d_int_x*d_own_y*v_int_y + b_geo**2*d_int_y*d_own_x*v_int_y + 4*b_geo**2*d_int_y*d_own_y*v_int_x - b_geo**2*d_own_x**2*v_int_x + b_geo**2*d_own_x*d_own_y*v_int_y - 2*b_geo*c_geo*d_int_x*v_int_y + 4*b_geo*c_geo*d_int_y*v_int_x + 2*b_geo*c_geo*d_own_x*v_int_y + 4*b_geo*c_geo*d_own_y*v_int_x + 4*c_geo**2*v_int_x + 2*np.sqrt((a_geo*d_own_x + b_geo*d_int_y + c_geo)*(a_geo*d_own_x + b_geo*d_own_y + c_geo)*(d_int_x**2 - 2*d_int_x*d_own_x + d_int_y**2 - 2*d_int_y*d_own_y + d_own_x**2 + d_own_y**2))*(a_geo*v_int_x + b_geo*v_int_y))/(4*a_geo**2*d_int_x*d_own_x - a_geo**2*d_int_y**2 + 2*a_geo**2*d_int_y*d_own_y - a_geo**2*d_own_y**2 + 2*a_geo*b_geo*d_int_x*d_int_y + 2*a_geo*b_geo*d_int_x*d_own_y + 2*a_geo*b_geo*d_int_y*d_own_x + 2*a_geo*b_geo*d_own_x*d_own_y + 4*a_geo*c_geo*d_int_x + 4*a_geo*c_geo*d_own_x - b_geo**2*d_int_x**2 + 2*b_geo**2*d_int_x*d_own_x + 4*b_geo**2*d_int_y*d_own_y - b_geo**2*d_own_x**2 + 4*b_geo*c_geo*d_int_y + 4*b_geo*c_geo*d_own_y + 4*c_geo**2)
@@ -115,6 +111,7 @@ class GeoPlotter(object):
             self.selected_element.set_xdata(x_array)
             self.selected_element.set_ydata(y_array)
             self.client.geofence = np.array([x_array, y_array]).T
+            self.client.update_abc()
         else:
             x = x0 + dx
             y = y0 + dy
@@ -125,17 +122,20 @@ class GeoPlotter(object):
                 self.client.p_own = np.array([x, y])
             else:
                 self.client.p_int = np.array([x, y])
+                
+        self.client.solution_plotter.calc_solution()
         
-        canvas = self.selected_element.figure.canvas
-        axes = self.selected_element.axes
-        # restore the background region
-        canvas.restore_region(self.background)
-        
-        # redraw just the selected element
-        axes.draw_artist(self.selected_element)
-        
-        # blit just the selected element
-        canvas.blit(axes.bbox)
+        if self.selected_element != None:
+            canvas = self.selected_element.figure.canvas
+            axes = self.selected_element.axes
+            # restore the background region
+            canvas.restore_region(self.background)
+            
+            # redraw just the selected element
+            axes.draw_artist(self.selected_element)
+            
+            # blit just the selected element
+            canvas.blit(axes.bbox)
         
     def on_release(self, event):
         'on release we reset the press data'
@@ -222,6 +222,7 @@ class SpeedPlotter(object):
         self.v_int.set_xdata(x_array)
         self.v_int.set_ydata(y_array)
         self.client.v_int = np.array([x_array[1], y_array[1]])
+        self.client.solution_plotter.calc_solution()
 
         
         canvas = self.v_int.figure.canvas
@@ -248,6 +249,75 @@ class SpeedPlotter(object):
         
         self.background = None
         self.lock = False
+        
+class SolutionPlotter(object):
+    def __init__(self, client):
+        self.client = client
+        self.background = None
+        
+        self.fig = plt.figure()
+        self.ax = plt.subplot()
+        self.fig.canvas.set_window_title('solution space')
+        self.ax.set_xlim(-30., 30.)
+        self.ax.set_ylim(-30., 30.)
+        plt.grid()
+        plt.ion()
+        self.sol_1, = self.ax.plot([0.,0.], [0.,0.])
+        self.sol_2, = self.ax.plot([0.,0.], [0.,0.])
+        
+        
+        self.v_x_1 = None
+        self.v_x_2 = None
+        self.v_y_1 = None
+        self.v_y_2 = None
+        
+        self.calc_solution()
+        
+    def calc_solution(self):
+        a_geo = self.client.a
+        b_geo = self.client.b
+        c_geo = self.client.c
+        
+        d_int_x = self.client.p_int[0]
+        d_int_y = self.client.p_int[1]
+        d_own_x = self.client.p_own[0]
+        d_own_y = self.client.p_own[1]
+        v_int_x = self.client.v_int[0]
+        v_int_y = self.client.v_int[1]
+        
+        if self.client.a == 1.:
+            v_res_x = np.arange(-30., 30., 0.01)
+            v_res_x_1 = v_res_x
+            v_res_x_2 = v_res_x
+            
+            v_res_y_1 = (-a_geo*d_int_y*v_res_x + 2*a_geo*d_own_x*v_int_y + a_geo*d_own_y*v_res_x + b_geo*d_int_x*v_int_x - b_geo*d_int_x*v_res_x + b_geo*d_int_y*v_int_y - b_geo*d_own_x*v_int_x + b_geo*d_own_x*v_res_x + b_geo*d_own_y*v_int_y + 2*c_geo*v_int_y - np.sqrt(4*a_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 4*a_geo**2*d_int_x*d_own_x*v_res_x**2 + a_geo**2*d_int_y**2*v_res_x**2 - 2*a_geo**2*d_int_y*d_own_y*v_res_x**2 - 4*a_geo**2*d_own_x**2*v_int_x**2 + 4*a_geo**2*d_own_x**2*v_int_x*v_res_x + a_geo**2*d_own_y**2*v_res_x**2 + 2*a_geo*b_geo*d_int_x*d_int_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_int_y*v_res_x**2 + 4*a_geo*b_geo*d_int_x*d_own_x*v_int_x*v_int_y - 4*a_geo*b_geo*d_int_x*d_own_x*v_int_y*v_res_x + 2*a_geo*b_geo*d_int_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_int_y**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_int_y*d_own_x*v_int_x**2 + 6*a_geo*b_geo*d_int_y*d_own_x*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_y*d_own_x*v_res_x**2 - 4*a_geo*b_geo*d_int_y*d_own_y*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x**2*v_int_x*v_int_y + 4*a_geo*b_geo*d_own_x**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x*d_own_y*v_int_x**2 + 6*a_geo*b_geo*d_own_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_own_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_own_y**2*v_int_y*v_res_x + 4*a_geo*c_geo*d_int_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_int_x*v_res_x**2 - 8*a_geo*c_geo*d_own_x*v_int_x**2 + 12*a_geo*c_geo*d_own_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_own_x*v_res_x**2 + b_geo**2*d_int_x**2*v_int_x**2 - 2*b_geo**2*d_int_x**2*v_int_x*v_res_x + b_geo**2*d_int_x**2*v_res_x**2 + 2*b_geo**2*d_int_x*d_int_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_int_y*v_int_y*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_int_x**2 + 4*b_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_res_x**2 + 2*b_geo**2*d_int_x*d_own_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_int_y**2*v_int_y**2 - 2*b_geo**2*d_int_y*d_own_x*v_int_x*v_int_y + 2*b_geo**2*d_int_y*d_own_x*v_int_y*v_res_x - 4*b_geo**2*d_int_y*d_own_y*v_int_x**2 + 8*b_geo**2*d_int_y*d_own_y*v_int_x*v_res_x - 2*b_geo**2*d_int_y*d_own_y*v_int_y**2 - 4*b_geo**2*d_int_y*d_own_y*v_res_x**2 + b_geo**2*d_own_x**2*v_int_x**2 - 2*b_geo**2*d_own_x**2*v_int_x*v_res_x + b_geo**2*d_own_x**2*v_res_x**2 - 2*b_geo**2*d_own_x*d_own_y*v_int_x*v_int_y + 2*b_geo**2*d_own_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_own_y**2*v_int_y**2 + 4*b_geo*c_geo*d_int_x*v_int_x*v_int_y - 4*b_geo*c_geo*d_int_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_int_y*v_int_x**2 + 8*b_geo*c_geo*d_int_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_int_y*v_res_x**2 - 4*b_geo*c_geo*d_own_x*v_int_x*v_int_y + 4*b_geo*c_geo*d_own_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_own_y*v_int_x**2 + 8*b_geo*c_geo*d_own_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_own_y*v_res_x**2 - 4*c_geo**2*v_int_x**2 + 8*c_geo**2*v_int_x*v_res_x - 4*c_geo**2*v_res_x**2))/(2*(a_geo*d_own_x + b_geo*d_int_y + c_geo))
+            v_res_y_2 = (-a_geo*d_int_y*v_res_x + 2*a_geo*d_own_x*v_int_y + a_geo*d_own_y*v_res_x + b_geo*d_int_x*v_int_x - b_geo*d_int_x*v_res_x + b_geo*d_int_y*v_int_y - b_geo*d_own_x*v_int_x + b_geo*d_own_x*v_res_x + b_geo*d_own_y*v_int_y + 2*c_geo*v_int_y + np.sqrt(4*a_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 4*a_geo**2*d_int_x*d_own_x*v_res_x**2 + a_geo**2*d_int_y**2*v_res_x**2 - 2*a_geo**2*d_int_y*d_own_y*v_res_x**2 - 4*a_geo**2*d_own_x**2*v_int_x**2 + 4*a_geo**2*d_own_x**2*v_int_x*v_res_x + a_geo**2*d_own_y**2*v_res_x**2 + 2*a_geo*b_geo*d_int_x*d_int_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_int_y*v_res_x**2 + 4*a_geo*b_geo*d_int_x*d_own_x*v_int_x*v_int_y - 4*a_geo*b_geo*d_int_x*d_own_x*v_int_y*v_res_x + 2*a_geo*b_geo*d_int_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_int_y**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_int_y*d_own_x*v_int_x**2 + 6*a_geo*b_geo*d_int_y*d_own_x*v_int_x*v_res_x - 2*a_geo*b_geo*d_int_y*d_own_x*v_res_x**2 - 4*a_geo*b_geo*d_int_y*d_own_y*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x**2*v_int_x*v_int_y + 4*a_geo*b_geo*d_own_x**2*v_int_y*v_res_x - 4*a_geo*b_geo*d_own_x*d_own_y*v_int_x**2 + 6*a_geo*b_geo*d_own_x*d_own_y*v_int_x*v_res_x - 2*a_geo*b_geo*d_own_x*d_own_y*v_res_x**2 + 2*a_geo*b_geo*d_own_y**2*v_int_y*v_res_x + 4*a_geo*c_geo*d_int_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_int_x*v_res_x**2 - 8*a_geo*c_geo*d_own_x*v_int_x**2 + 12*a_geo*c_geo*d_own_x*v_int_x*v_res_x - 4*a_geo*c_geo*d_own_x*v_res_x**2 + b_geo**2*d_int_x**2*v_int_x**2 - 2*b_geo**2*d_int_x**2*v_int_x*v_res_x + b_geo**2*d_int_x**2*v_res_x**2 + 2*b_geo**2*d_int_x*d_int_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_int_y*v_int_y*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_int_x**2 + 4*b_geo**2*d_int_x*d_own_x*v_int_x*v_res_x - 2*b_geo**2*d_int_x*d_own_x*v_res_x**2 + 2*b_geo**2*d_int_x*d_own_y*v_int_x*v_int_y - 2*b_geo**2*d_int_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_int_y**2*v_int_y**2 - 2*b_geo**2*d_int_y*d_own_x*v_int_x*v_int_y + 2*b_geo**2*d_int_y*d_own_x*v_int_y*v_res_x - 4*b_geo**2*d_int_y*d_own_y*v_int_x**2 + 8*b_geo**2*d_int_y*d_own_y*v_int_x*v_res_x - 2*b_geo**2*d_int_y*d_own_y*v_int_y**2 - 4*b_geo**2*d_int_y*d_own_y*v_res_x**2 + b_geo**2*d_own_x**2*v_int_x**2 - 2*b_geo**2*d_own_x**2*v_int_x*v_res_x + b_geo**2*d_own_x**2*v_res_x**2 - 2*b_geo**2*d_own_x*d_own_y*v_int_x*v_int_y + 2*b_geo**2*d_own_x*d_own_y*v_int_y*v_res_x + b_geo**2*d_own_y**2*v_int_y**2 + 4*b_geo*c_geo*d_int_x*v_int_x*v_int_y - 4*b_geo*c_geo*d_int_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_int_y*v_int_x**2 + 8*b_geo*c_geo*d_int_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_int_y*v_res_x**2 - 4*b_geo*c_geo*d_own_x*v_int_x*v_int_y + 4*b_geo*c_geo*d_own_x*v_int_y*v_res_x - 4*b_geo*c_geo*d_own_y*v_int_x**2 + 8*b_geo*c_geo*d_own_y*v_int_x*v_res_x - 4*b_geo*c_geo*d_own_y*v_res_x**2 - 4*c_geo**2*v_int_x**2 + 8*c_geo**2*v_int_x*v_res_x - 4*c_geo**2*v_res_x**2))/(2*(a_geo*d_own_x + b_geo*d_int_y + c_geo))
+            
+        else:
+            v_res_y = np.arange(-30., 30., 0.01)
+            v_res_y_1 = v_res_y
+            v_res_y_2 = v_res_y
+            
+            v_res_x_1 = (a_geo*d_int_x*v_int_x + a_geo*d_int_y*v_int_y - a_geo*d_int_y*v_res_y + a_geo*d_own_x*v_int_x - a_geo*d_own_y*v_int_y + a_geo*d_own_y*v_res_y - b_geo*d_int_x*v_res_y + b_geo*d_own_x*v_res_y + 2*b_geo*d_own_y*v_int_x + 2*c_geo*v_int_x - np.sqrt(a_geo**2*d_int_x**2*v_int_x**2 + 2*a_geo**2*d_int_x*d_int_y*v_int_x*v_int_y - 2*a_geo**2*d_int_x*d_int_y*v_int_x*v_res_y - 2*a_geo**2*d_int_x*d_own_x*v_int_x**2 - 4*a_geo**2*d_int_x*d_own_x*v_int_y**2 + 8*a_geo**2*d_int_x*d_own_x*v_int_y*v_res_y - 4*a_geo**2*d_int_x*d_own_x*v_res_y**2 - 2*a_geo**2*d_int_x*d_own_y*v_int_x*v_int_y + 2*a_geo**2*d_int_x*d_own_y*v_int_x*v_res_y + a_geo**2*d_int_y**2*v_int_y**2 - 2*a_geo**2*d_int_y**2*v_int_y*v_res_y + a_geo**2*d_int_y**2*v_res_y**2 + 2*a_geo**2*d_int_y*d_own_x*v_int_x*v_int_y - 2*a_geo**2*d_int_y*d_own_x*v_int_x*v_res_y - 2*a_geo**2*d_int_y*d_own_y*v_int_y**2 + 4*a_geo**2*d_int_y*d_own_y*v_int_y*v_res_y - 2*a_geo**2*d_int_y*d_own_y*v_res_y**2 + a_geo**2*d_own_x**2*v_int_x**2 - 2*a_geo**2*d_own_x*d_own_y*v_int_x*v_int_y + 2*a_geo**2*d_own_x*d_own_y*v_int_x*v_res_y + a_geo**2*d_own_y**2*v_int_y**2 - 2*a_geo**2*d_own_y**2*v_int_y*v_res_y + a_geo**2*d_own_y**2*v_res_y**2 + 2*a_geo*b_geo*d_int_x**2*v_int_x*v_res_y + 2*a_geo*b_geo*d_int_x*d_int_y*v_int_y*v_res_y - 2*a_geo*b_geo*d_int_x*d_int_y*v_res_y**2 - 4*a_geo*b_geo*d_int_x*d_own_x*v_int_x*v_res_y - 4*a_geo*b_geo*d_int_x*d_own_y*v_int_y**2 + 6*a_geo*b_geo*d_int_x*d_own_y*v_int_y*v_res_y - 2*a_geo*b_geo*d_int_x*d_own_y*v_res_y**2 + 2*a_geo*b_geo*d_int_y*d_own_x*v_int_y*v_res_y - 2*a_geo*b_geo*d_int_y*d_own_x*v_res_y**2 + 4*a_geo*b_geo*d_int_y*d_own_y*v_int_x*v_int_y - 4*a_geo*b_geo*d_int_y*d_own_y*v_int_x*v_res_y + 2*a_geo*b_geo*d_own_x**2*v_int_x*v_res_y - 4*a_geo*b_geo*d_own_x*d_own_y*v_int_y**2 + 6*a_geo*b_geo*d_own_x*d_own_y*v_int_y*v_res_y - 2*a_geo*b_geo*d_own_x*d_own_y*v_res_y**2 - 4*a_geo*b_geo*d_own_y**2*v_int_x*v_int_y + 4*a_geo*b_geo*d_own_y**2*v_int_x*v_res_y - 4*a_geo*c_geo*d_int_x*v_int_y**2 + 8*a_geo*c_geo*d_int_x*v_int_y*v_res_y - 4*a_geo*c_geo*d_int_x*v_res_y**2 + 4*a_geo*c_geo*d_int_y*v_int_x*v_int_y - 4*a_geo*c_geo*d_int_y*v_int_x*v_res_y - 4*a_geo*c_geo*d_own_x*v_int_y**2 + 8*a_geo*c_geo*d_own_x*v_int_y*v_res_y - 4*a_geo*c_geo*d_own_x*v_res_y**2 - 4*a_geo*c_geo*d_own_y*v_int_x*v_int_y + 4*a_geo*c_geo*d_own_y*v_int_x*v_res_y + b_geo**2*d_int_x**2*v_res_y**2 - 2*b_geo**2*d_int_x*d_own_x*v_res_y**2 + 4*b_geo**2*d_int_y*d_own_y*v_int_y*v_res_y - 4*b_geo**2*d_int_y*d_own_y*v_res_y**2 + b_geo**2*d_own_x**2*v_res_y**2 - 4*b_geo**2*d_own_y**2*v_int_y**2 + 4*b_geo**2*d_own_y**2*v_int_y*v_res_y + 4*b_geo*c_geo*d_int_y*v_int_y*v_res_y - 4*b_geo*c_geo*d_int_y*v_res_y**2 - 8*b_geo*c_geo*d_own_y*v_int_y**2 + 12*b_geo*c_geo*d_own_y*v_int_y*v_res_y - 4*b_geo*c_geo*d_own_y*v_res_y**2 - 4*c_geo**2*v_int_y**2 + 8*c_geo**2*v_int_y*v_res_y - 4*c_geo**2*v_res_y**2))/(2*(a_geo*d_int_x + b_geo*d_own_y + c_geo))
+            v_res_x_2 = (a_geo*d_int_x*v_int_x + a_geo*d_int_y*v_int_y - a_geo*d_int_y*v_res_y + a_geo*d_own_x*v_int_x - a_geo*d_own_y*v_int_y + a_geo*d_own_y*v_res_y - b_geo*d_int_x*v_res_y + b_geo*d_own_x*v_res_y + 2*b_geo*d_own_y*v_int_x + 2*c_geo*v_int_x + np.sqrt(a_geo**2*d_int_x**2*v_int_x**2 + 2*a_geo**2*d_int_x*d_int_y*v_int_x*v_int_y - 2*a_geo**2*d_int_x*d_int_y*v_int_x*v_res_y - 2*a_geo**2*d_int_x*d_own_x*v_int_x**2 - 4*a_geo**2*d_int_x*d_own_x*v_int_y**2 + 8*a_geo**2*d_int_x*d_own_x*v_int_y*v_res_y - 4*a_geo**2*d_int_x*d_own_x*v_res_y**2 - 2*a_geo**2*d_int_x*d_own_y*v_int_x*v_int_y + 2*a_geo**2*d_int_x*d_own_y*v_int_x*v_res_y + a_geo**2*d_int_y**2*v_int_y**2 - 2*a_geo**2*d_int_y**2*v_int_y*v_res_y + a_geo**2*d_int_y**2*v_res_y**2 + 2*a_geo**2*d_int_y*d_own_x*v_int_x*v_int_y - 2*a_geo**2*d_int_y*d_own_x*v_int_x*v_res_y - 2*a_geo**2*d_int_y*d_own_y*v_int_y**2 + 4*a_geo**2*d_int_y*d_own_y*v_int_y*v_res_y - 2*a_geo**2*d_int_y*d_own_y*v_res_y**2 + a_geo**2*d_own_x**2*v_int_x**2 - 2*a_geo**2*d_own_x*d_own_y*v_int_x*v_int_y + 2*a_geo**2*d_own_x*d_own_y*v_int_x*v_res_y + a_geo**2*d_own_y**2*v_int_y**2 - 2*a_geo**2*d_own_y**2*v_int_y*v_res_y + a_geo**2*d_own_y**2*v_res_y**2 + 2*a_geo*b_geo*d_int_x**2*v_int_x*v_res_y + 2*a_geo*b_geo*d_int_x*d_int_y*v_int_y*v_res_y - 2*a_geo*b_geo*d_int_x*d_int_y*v_res_y**2 - 4*a_geo*b_geo*d_int_x*d_own_x*v_int_x*v_res_y - 4*a_geo*b_geo*d_int_x*d_own_y*v_int_y**2 + 6*a_geo*b_geo*d_int_x*d_own_y*v_int_y*v_res_y - 2*a_geo*b_geo*d_int_x*d_own_y*v_res_y**2 + 2*a_geo*b_geo*d_int_y*d_own_x*v_int_y*v_res_y - 2*a_geo*b_geo*d_int_y*d_own_x*v_res_y**2 + 4*a_geo*b_geo*d_int_y*d_own_y*v_int_x*v_int_y - 4*a_geo*b_geo*d_int_y*d_own_y*v_int_x*v_res_y + 2*a_geo*b_geo*d_own_x**2*v_int_x*v_res_y - 4*a_geo*b_geo*d_own_x*d_own_y*v_int_y**2 + 6*a_geo*b_geo*d_own_x*d_own_y*v_int_y*v_res_y - 2*a_geo*b_geo*d_own_x*d_own_y*v_res_y**2 - 4*a_geo*b_geo*d_own_y**2*v_int_x*v_int_y + 4*a_geo*b_geo*d_own_y**2*v_int_x*v_res_y - 4*a_geo*c_geo*d_int_x*v_int_y**2 + 8*a_geo*c_geo*d_int_x*v_int_y*v_res_y - 4*a_geo*c_geo*d_int_x*v_res_y**2 + 4*a_geo*c_geo*d_int_y*v_int_x*v_int_y - 4*a_geo*c_geo*d_int_y*v_int_x*v_res_y - 4*a_geo*c_geo*d_own_x*v_int_y**2 + 8*a_geo*c_geo*d_own_x*v_int_y*v_res_y - 4*a_geo*c_geo*d_own_x*v_res_y**2 - 4*a_geo*c_geo*d_own_y*v_int_x*v_int_y + 4*a_geo*c_geo*d_own_y*v_int_x*v_res_y + b_geo**2*d_int_x**2*v_res_y**2 - 2*b_geo**2*d_int_x*d_own_x*v_res_y**2 + 4*b_geo**2*d_int_y*d_own_y*v_int_y*v_res_y - 4*b_geo**2*d_int_y*d_own_y*v_res_y**2 + b_geo**2*d_own_x**2*v_res_y**2 - 4*b_geo**2*d_own_y**2*v_int_y**2 + 4*b_geo**2*d_own_y**2*v_int_y*v_res_y + 4*b_geo*c_geo*d_int_y*v_int_y*v_res_y - 4*b_geo*c_geo*d_int_y*v_res_y**2 - 8*b_geo*c_geo*d_own_y*v_int_y**2 + 12*b_geo*c_geo*d_own_y*v_int_y*v_res_y - 4*b_geo*c_geo*d_own_y*v_res_y**2 - 4*c_geo**2*v_int_y**2 + 8*c_geo**2*v_int_y*v_res_y - 4*c_geo**2*v_res_y**2))/(2*(a_geo*d_int_x + b_geo*d_own_y + c_geo))
+        
+        # conditions
+        # tcpa >= 0:
+        t_cond_1 = (d_own_x - d_int_x) * (v_res_x_1 - v_int_x) + (d_own_y - d_int_y) * (v_res_y_1 - v_int_y) <= 0.
+        t_cond_2 = (d_own_x - d_int_x) * (v_res_x_2 - v_int_x) + (d_own_y - d_int_y) * (v_res_y_2 - v_int_y) <= 0.
+        
+        v_res_x_1 = v_res_x_1[t_cond_1]
+        v_res_y_1 = v_res_y_1[t_cond_1]
+        v_res_x_2 = v_res_x_2[t_cond_2]
+        v_res_y_2 = v_res_y_2[t_cond_2]
+        
+        self.sol_1.set_xdata(v_res_x_1)
+        self.sol_1.set_ydata(v_res_y_1)
+        self.sol_2.set_xdata(v_res_x_2)
+        self.sol_2.set_ydata(v_res_y_2)
+        
+        self.fig.canvas.draw()
+        self.fig.canvas.flush_events()
           
 class Client(object):
     def __init__(self, geofence, p_own, p_int, v_int):
@@ -256,13 +326,19 @@ class Client(object):
         self.p_own = p_own
         self.p_int = p_int
         self.v_int = v_int
-        
+        self.a, self.b, self.c = lin_tools.line_eq_from_points(geofence[0], geofence[1])
+
         # Interactive plotters
         self.geo_plotter = GeoPlotter(self)
         self.geo_plotter.connect()
         
         self.speed_plotter = SpeedPlotter(self)
         self.speed_plotter.connect()
+        
+        self.solution_plotter = SolutionPlotter(self)
+        
+    def update_abc(self):
+        self.a, self.b, self.c = lin_tools.line_eq_from_points(geofence[0], geofence[1])
 
 plt.close("all")
 geofence = np.array([[x_geo_0, y_geo_0], [x_geo_1, y_geo_1]])

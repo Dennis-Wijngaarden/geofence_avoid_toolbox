@@ -14,9 +14,10 @@ def line_eq_from_points(point0, point1):
     # a x_0 + b y_0 = a x_1 + b y_1 
     try:
         a_over_b = (point1[1] - point0[1]) / (point0[0] - point1[0])
-        if a_over_b <= 1.:
+        if abs(a_over_b) <= 1.:
             b = 1.
             a = a_over_b
+            
         else:
             b_over_a = (point1[0] - point0[0]) / (point0[1] - point1[1])
             a = 1.
