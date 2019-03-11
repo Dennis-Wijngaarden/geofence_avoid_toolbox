@@ -22,7 +22,7 @@ def line_eq_from_points(point0, point1):
             b_over_a = (point1[0] - point0[0]) / (point0[1] - point1[1])
             a = 1.
             b = b_over_a
-    except ZeroDivisionError:
+    except RuntimeWarning:
         b_over_a = (point1[0] - point0[0]) / (point0[1] - point1[1])
         a = 1.
         b = b_over_a
